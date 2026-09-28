@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A" />
+      <stop offset="100%" stop-color="#1E293B" />
+    </linearGradient>
+
+    <!-- Card Background Gradient -->
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#0F172A" stop-opacity="0.95" />
+    </linearGradient>
+
+    <!-- Ring Gradients -->
+    <linearGradient id="moveGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF2A6D" />
+      <stop offset="100%" stop-color="#FA114F" />
+    </linearGradient>
+
+    <linearGradient id="exerciseGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#05FFA1" />
+      <stop offset="100%" stop-color="#AAF724" />
+    </linearGradient>
+
+    <linearGradient id="standGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F5D4" />
+      <stop offset="100%" stop-color="#00BBF9" />
+    </linearGradient>
+
+    <!-- Drop Shadow for Cards -->
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="125%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.5" />
+    </filter>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="800" height="400" rx="16" fill="url(#bgGrad)" />
+
+  <!-- Subtitle / Title -->
+  <text x="400" y="42" text-anchor="middle" fill="#38BDF8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="800" letter-spacing="0.5">
+    segmented_ring_painter
+  </text>
+  <text x="400" y="66" text-anchor="middle" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13">
+    High-Performance Flutter Segmented Progress &amp; Concentric Activity Rings
+  </text>
+
+  <!-- Left Card: Nested Activity Rings -->
+  <g transform="translate(48, 90)">
+    <rect width="336" height="275" rx="20" fill="url(#cardGrad)" stroke="#334155" stroke-width="1.5" filter="url(#cardShadow)" />
+    
+    <text x="168" y="32" text-anchor="middle" fill="#F8FAFC" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="15" font-weight="700">
+      Nested Activity Rings
+    </text>
+    <text x="168" y="48" text-anchor="middle" fill="#64748B" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11">
+      Apple Fitness Style · Concentric Overlap
+    </text>
+
+    <!-- Concentric Rings Center (168, 150) -->
+    <g transform="translate(168, 150)">
+      <!-- Ring 1 (Outer - Move, Radius 72, Stroke 16) -->
+      <circle r="72" fill="none" stroke="#FA114F" stroke-opacity="0.18" stroke-width="16" />
+      <!-- 85% = 306 deg -> from (0, -72) to (-58.25, -42.32) -->
+      <path d="M 0,-72 A 72 72 0 1 1 -58.25,-42.32" fill="none" stroke="url(#moveGrad)" stroke-width="16" stroke-linecap="round" />
+
+      <!-- Ring 2 (Middle - Exercise, Radius 52, Stroke 16) -->
+      <circle r="52" fill="none" stroke="#AAF724" stroke-opacity="0.18" stroke-width="16" />
+      <!-- 100% full circle + overlap -> 350 deg from (0, -52) to (-9.03, -51.21) -->
+      <path d="M 0,-52 A 52 52 0 1 1 -9.03,-51.21" fill="none" stroke="url(#exerciseGrad)" stroke-width="16" stroke-linecap="round" />
+
+      <!-- Ring 3 (Inner - Stand, Radius 32, Stroke 16) -->
+      <circle r="32" fill="none" stroke="#00F5D4" stroke-opacity="0.18" stroke-width="16" />
+      <!-- 75% = 270 deg -> from (0, -32) to (-32, 0) -->
+      <path d="M 0,-32 A 32 32 0 1 1 -32,0" fill="none" stroke="url(#standGrad)" stroke-width="16" stroke-linecap="round" />
+
+      <!-- Center Fire Icon -->
+      <circle r="14" fill="#0F172A" />
+      <path d="M 0,-6 C 3,-2 5,1 4,5 C 3,8 0,9 0,9 C 0,9 -3,8 -4,5 C -5,1 -3,-2 0,-6 Z" fill="#FA114F" />
+    </g>
+
+    <!-- Legend -->
+    <g transform="translate(36, 248)">
+      <circle cx="8" cy="0" r="5" fill="#FA114F" />
+      <text x="18" y="4" fill="#E2E8F0" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="600">Move 85%</text>
+
+      <circle cx="108" cy="0" r="5" fill="#AAF724" />
+      <text x="118" y="4" fill="#E2E8F0" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="600">Ex. 110%</text>
+
+      <circle cx="204" cy="0" r="5" fill="#00F5D4" />
+      <text x="214" y="4" fill="#E2E8F0" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="600">Stand 75%</text>
+    </g>
+  </g>
+
+  <!-- Right Card: Segmented Ring Breakdown -->
+  <g transform="translate(416, 90)">
+    <rect width="336" height="275" rx="20" fill="url(#cardGrad)" stroke="#334155" stroke-width="1.5" filter="url(#cardShadow)" />
+    
+    <text x="168" y="32" text-anchor="middle" fill="#F8FAFC" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="15" font-weight="700">
+      Segmented Macro &amp; Budget Ring
+    </text>
+    <text x="168" y="48" text-anchor="middle" fill="#64748B" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11">
+      Proportional Arcs · Angular Gaps · Tap Hit-Testing
+    </text>
+
+    <!-- Segmented Ring Center (168, 150), Radius 68, Stroke 18 -->
+    <g transform="translate(168, 150)">
+      <!-- Background Track -->
+      <circle r="68" fill="none" stroke="#334155" stroke-width="18" stroke-opacity="0.3" />
+
+      <!-- Segment 1 (Carbs - Blue: 48%, Start -90°, Sweep 161.3°) -->
+      <path d="M 0,-68 A 68 68 0 0 1 21.82,64.40" fill="none" stroke="#38BDF8" stroke-width="18" stroke-linecap="round" />
+
+      <!-- Segment 2 (Protein - Green: 32%, Start 79.3°, Sweep 107.5°) -->
+      <path d="M 12.65,66.81 A 68 68 0 0 1 -67.52,-8.05" fill="none" stroke="#34D399" stroke-width="18" stroke-linecap="round" />
+
+      <!-- Segment 3 (Fat - Yellow: 20%, Start 194.8°, Sweep 67.2°) -->
+      <path d="M -65.74,-17.37 A 68 68 0 0 1 -9.46,-67.34" fill="none" stroke="#FBBF24" stroke-width="18" stroke-linecap="round" />
+
+      <!-- Center Total -->
+      <text x="0" y="-4" text-anchor="middle" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="22" font-weight="800">
+        1,845
+      </text>
+      <text x="0" y="14" text-anchor="middle" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="600">
+        TOTAL KCAL
+      </text>
+    </g>
+
+    <!-- Legend -->
+    <g transform="translate(32, 248)">
+      <circle cx="8" cy="0" r="5" fill="#38BDF8" />
+      <text x="18" y="4" fill="#E2E8F0" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="600">Carbs (48%)</text>
+
+      <circle cx="112" cy="0" r="5" fill="#34D399" />
+      <text x="122" y="4" fill="#E2E8F0" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="600">Protein (32%)</text>
+
+      <circle cx="218" cy="0" r="5" fill="#FBBF24" />
+      <text x="228" y="4" fill="#E2E8F0" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="600">Fat (20%)</text>
+    </g>
+  </g>
+</svg>

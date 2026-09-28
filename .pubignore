@@ -1,0 +1,10 @@
+.dart_tool/
+.packages
+.pub/
+build/
+example/.dart_tool/
+example/build/
+example/.packages
+.idea/
+*.iml
+.DS_Store
