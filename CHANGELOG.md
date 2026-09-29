@@ -1,3 +1,10 @@
+## 1.1.0
+
+* Added explicit `platforms` declaration (Android, iOS, Web, macOS, Windows, Linux).
+* Added overachievement shadow rendering and exact trigonometric geometry.
+
+## 1.0.0 Added `platforms` declaration (android, ios, linux, macos, windows, web).
+
 ## 1.0.0
 
 * Initial stable release of `segmented_ring_painter`.
