@@ -17,7 +17,7 @@ enum SegmentedRingMode {
   /// Segments are proportioned relative to the sum of all segment values (100% total).
   proportional,
 
-  /// Segments are proportioned against an explicit [totalValue].
+  /// Segments are proportioned against an explicit `totalValue`.
   absolute,
 
   /// Ring is divided into equal discrete tick marks up to total capacity.

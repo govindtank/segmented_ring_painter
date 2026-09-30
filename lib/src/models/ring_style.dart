@@ -112,7 +112,7 @@ class NestedRingsStyle {
   /// Starting angle in degrees (default: -90.0 for 12 o'clock).
   final double startAngle;
 
-  /// Opacity multiplier for background tracks when ring has no explicit [trackColor].
+  /// Opacity multiplier for background tracks when ring has no explicit `trackColor`.
   final double defaultTrackOpacity;
 
   /// Whether to render overlapping end-cap drop shadows when a ring exceeds 100% progress.

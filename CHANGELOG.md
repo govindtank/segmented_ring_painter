@@ -14,3 +14,7 @@
 * Added full customization for gradient sweeps, outer glows, track backgrounds, and stroke cap styles.
 * Added interactive example application with live controls and sliders.
 * 100% test coverage across all mathematical models and widget behaviors.
+
+## 1.1.1
+
+* Fix dartdoc warnings.
