@@ -1,4 +1,4 @@
-name: CI
+name: Publish to Pub.dev
 
 on:
   push:
@@ -6,20 +6,33 @@ on:
   pull_request:
     branches: [ main, master ]
 
+permissions:
+  id-token: write
+  contents: read
+
 jobs:
-  build:
+  check-and-publish:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - uses: subosito/flutter-action@v2
         with:
           channel: 'stable'
           cache: true
+
       - name: Install dependencies
         run: flutter pub get
+
       - name: Verify formatting
         run: dart format --output=none --set-exit-if-changed .
+
       - name: Analyze project
         run: flutter analyze
+
       - name: Run tests
         run: flutter test
+
+      - name: Publish to pub.dev
+        if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')
+        run: dart pub publish --force
