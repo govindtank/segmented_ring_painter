@@ -18,3 +18,8 @@
 ## 1.1.1
 
 * Fix dartdoc warnings.
+
+## 1.1.2
+
+* Added `RingGradientHelper.sweep()` for angular arc gradients.
+* Cleaned dartdoc references and updated automated publishing workflow.

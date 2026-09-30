@@ -214,3 +214,21 @@ class RingMath {
     return null;
   }
 }
+
+/// Helper to create angular gradient shaders for ring arcs.
+class RingGradientHelper {
+  /// Builds a sweep gradient centered on the circle.
+  static SweepGradient sweep({
+    required List<Color> colors,
+    List<double>? stops,
+    double startAngle = 0.0,
+    double endAngle = 6.283185307179586,
+  }) {
+    return SweepGradient(
+      colors: colors,
+      stops: stops,
+      startAngle: startAngle,
+      endAngle: endAngle,
+    );
+  }
+}
