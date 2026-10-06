@@ -1,7 +1,8 @@
 # segmented_ring_painter
 
 [![Pub Version](https://img.shields.io/pub/v/segmented_ring_painter.svg?style=flat-square&color=blue)](https://pub.dev/packages/segmented_ring_painter)
-[![Pub Points](https://img.shields.io/pub/points/segmented_ring_painter?style=flat-square&color=2E8B57&label=pub%20points)](https://pub.dev/packages/segmented_ring_painter/score)
+[![Pub Points](https://img.shields.io/pub/points/segmented_ring_painter?style=flat-square[![Pub Points](https://img.shields.io/pub/points/segmented_ring_painter?style=flat-square&color=2E8B57&label=pub%20points)](https://pub.dev/packages/segmented_ring_painter/score)color=2E8B57[![Pub Points](https://img.shields.io/pub/points/segmented_ring_painter?style=flat-square&color=2E8B57&label=pub%20points)](https://pub.dev/packages/segmented_ring_painter/score)label=pub%20points)](https://pub.dev/packages/segmented_ring_painter/score)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Try%20In%20Browser-00ff88?style=flat-square&logo=flutter)](https://govindtank.github.io/segmented_ring_painter/)
 [![Pub Likes](https://img.shields.io/pub/likes/segmented_ring_painter?style=flat-square)](https://pub.dev/packages/segmented_ring_painter)
 [![CI](https://github.com/govindtank/segmented_ring_painter/actions/workflows/ci.yml/badge.svg)](https://github.com/govindtank/segmented_ring_painter/actions)
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg?style=flat-square)](LICENSE)
