@@ -1,6 +1,6 @@
 name: segmented_ring_painter
 description: "High-performance segmented circular progress and concentric activity ring widget for Flutter with gradient arcs, rounded caps, gap math, and tap hit-testing."
-version: 1.1.2
+version: 1.1.3
 homepage: https://github.com/govindtank/segmented_ring_painter
 repository: https://github.com/govindtank/segmented_ring_painter
 topics:

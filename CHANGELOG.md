@@ -1,3 +1,7 @@
+## 1.1.3
+
+* docs: add interactive Live Web Demo and ecosystem documentation.
+
 ## 1.1.2
 
 * Added `RingGradientHelper.sweep()` for angular arc gradients.
